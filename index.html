@@ -1,0 +1,58 @@
+<html>
+<head>
+	<script type="text/javascript" 
+		src = "third_party/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" 
+		src = "third_party/text-encoding/lib/encoding.js"></script>
+	<script type="text/javascript" 
+		src = "plain_big_text/plain_big_text.js"></script>
+	<script type="text/javascript" src = "rcp_js/rcp_js.js"></script>
+	<script type="text/javascript" src = "index.js"></script>
+	<link id="css" rel="stylesheet" href="main.css"></link>
+	<meta charset="utf-8"></meta>
+	<title>rcpJS</title>
+</head>
+<body>
+
+<h1>> /dev/null</h1>
+Realtime co-operative plain text editor.
+Click text at the contents section and type what you want.
+<br/>
+<br/>
+
+server status:<div id="server_status">checking...</div>
+server URL:<div id="server_url"></div>
+github:
+<a href="https://github.com/Kent-Na/rcp_js.git">rcp_js</a>
+<a href="https://github.com/Kent-Na/plain_big_text.git">plain_big_text</a>
+<a href="https://github.com/Kent-Na/rcp_js.git">dev_null</a>
+
+
+<br/>
+contents:
+<br/>
+<div id="input"><div id="carret"></div></div>
+<br/>
+
+<br/>
+output:
+<br/>
+<div id="output"></div>
+
+<br/>
+<textarea id="raw_input" wrap="soft" cols=80 rows=2 
+	placeholder="Don't look at me. I'm just sitting here."></textarea>
+
+<br/>
+<button id="button_load" type="a">load(to_remote)</button>
+<button id="button_store" type="a">store(to_local)</button>
+<br/>
+
+command log
+<br/>
+<div id="command_log"></div>
+
+</body>
+</html>
+
+
