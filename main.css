@@ -12,3 +12,8 @@ div#carret{
 	background-color:#000000;
 	padding-left:2px;
 }
+
+#raw_input{
+	position:fixed;
+	bottom:0px;
+}

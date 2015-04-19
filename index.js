@@ -54,6 +54,9 @@
 					}
 				}
 				itr = itr.nextSibling;
+				if (itr == null){
+					return;
+				}
 			}
 			carret_position = begin+range.startOffset;
 			
@@ -237,11 +240,16 @@
 				return false;
 			}
 		})
+		$("#raw_input").blur(function(e){
+			$("#carret").remove();
+		})
 
 		var contents_memory = "";
 		$("#button_load").click(function(){
-			rcpConnection.context.localSite.state.contents = 
-				contents_memory;
+			rcpConnection.context.request_replace_text(
+				0, 0, contents_memory);
+			//rcpConnection.context.localSite.state.contents = 
+				//contents_memory;
 		});
 		$("#button_store").click(function(){
 			contents_memory = 
